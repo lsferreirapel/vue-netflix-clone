@@ -3,7 +3,7 @@ import VueResource from 'vue-resource';
 
 Vue.use(VueResource);
 
-const http = Vue.http;
+const http = (Vue as any).http;
 
 http.options.root = `${process.env.VUE_APP_TMDB_URL}`
 
